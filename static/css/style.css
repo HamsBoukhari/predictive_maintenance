@@ -1,0 +1,32 @@
+body{
+    background-color: blue;
+}
+header{
+    margin:60px ;
+    text-align:center;
+    font-size:40px;
+    color:white;
+    font-weight: bold;
+}
+form{
+    display: grid;
+    margin-left:500px;
+    margin-right: 500px;
+}
+label{
+    font-size: 21px;
+    text-align: center;
+    font-weight: bold;
+}
+input{
+    margin: 10px;
+    padding: 7px;
+}
+select{
+    margin: 10px;
+    padding: 7px;
+}
+button{
+    margin: 10px;
+    padding: 5px;
+}
