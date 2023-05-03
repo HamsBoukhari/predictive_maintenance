@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>predictive maintenance</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <header>Predictive Maintenance</header>
+    <form>
+        <label for="type">Type</label>
+        <select name="type" id="type" required>
+           {%for t in type%}
+           <option value="{{t}}">{{t}}</option>
+           {%endfor%}
+        </select>
+        <label for="air_temp">Enter the Air temperature</label>
+        <input type="text" name="air_temp" id="air_temp" required>
+        <label for="pr_temp">Enter the Process temperature</label>
+        <input type="text" name="pr_temp" id="pr_temp" required>
+        <label for="rot">Enter the Rotational Speed</label>
+        <input type="text" name="rot" id="rot" required>
+        <label for="torque">Enter the Torque</label>
+        <input type="text" name="torque" id="torque" required>
+        <label for="tool">Enter the Tool wear</label>
+        <input type="text" name="tool" id="tool" required>
+        <button id="btn" onclick="send_data()">Predict Price</button>
+    </form>
+    <div style="text-align:center">
+        <h3><span id="prediction"></span></h3>
+    </div>
+    <script>
+        function send_data(){
+        document.querySelector('form').addEventListener("submit",function form_handler(event){
+            event.preventDefault()
+        })
+        var fd=new FormData(document.querySelector('form'))
+        var xhr=new XMLHttpRequest()
+        xhr.open('POST','/predict',true)
+        document.getElementById('prediction').innerHTML="Wait we are predicting the price"
+        xhr.onreadystatechange=function(){
+            if (xhr.readyState==XMLHttpRequest.DONE){
+                document.getElementById('prediction').innerHTML=xhr.responseText
+            }
+        }
+        xhr.onload=function(){}
+        xhr.send(fd)
+    }
+    </script>
+</body>
+</html>
