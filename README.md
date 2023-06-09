@@ -1,4 +1,4 @@
-La mise en œuvre de systèmes de maintenance prédictive a permis d'obtenir des résultats impressionnants dans des différents secteurs.Selon des statistiques,La maintenance prédictive augmente la productivité de 25 %, tout en réduisant les pannes de 70 % et les coûts de maintenance de 25 %.Dans ce projet,nous allons appliquer la maintenance prédictive dans l'industrie.Nous allons prédire si une machine tournante va tomber en panne et la cause de la défaillance.Voici une démonstration d'une application Web réalisée après la construction d'un modèle de machine learning :
+La mise en œuvre de systèmes de maintenance prédictive a permis d'obtenir des résultats impressionnants dans des différents secteurs. Selon des statistiques,La maintenance prédictive augmente la productivité de 25 %, tout en réduisant les pannes de 70 % et les coûts de maintenance de 25 %. Dans ce projet,nous allons appliquer la maintenance prédictive dans l'industrie. Nous allons prédire si une machine tournante va tomber en panne et la cause de la défaillance. Voici une démonstration d'une application Web réalisée après la construction d'un modèle de machine learning :
 
 
 
